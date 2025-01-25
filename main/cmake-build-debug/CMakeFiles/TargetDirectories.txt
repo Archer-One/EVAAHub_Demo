@@ -1,0 +1,3 @@
+/home/archer-oneee/Desktop/ClionProject/cmake-build-debug/CMakeFiles/ClionProject.dir
+/home/archer-oneee/Desktop/ClionProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/archer-oneee/Desktop/ClionProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir

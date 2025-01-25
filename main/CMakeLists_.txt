@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.24)
+project(ClionProject)
+
+set(CMAKE_CXX_STANDARD 20)
+
+find_package(PkgConfig REQUIRED)
+
+if (PKG_CONFIG_FOUND)
+    pkg_check_modules(my_deps REQUIRED IMPORTED_TARGET libbitcoin)
+endif()
+# gmp和pbc是必须要链接上去的
+
+
+# 引入pbcwrapper的头文件和静态库
+include_directories(${PROJECT_SOURCE_DIR}/pbcwrapper)
+link_directories(${PROJECT_SOURCE_DIR}/pbcwrapper)
+
+link_libraries(gmp)
+link_libraries(pbc)
+
+add_executable(ClionProject main.cpp Testing.cc)
+
+target_link_libraries(${PROJECT_NAME} PkgConfig::my_deps)
+#target_link_libraries(${PROJECT_NAME} PBC)
